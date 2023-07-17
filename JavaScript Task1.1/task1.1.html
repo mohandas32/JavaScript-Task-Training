@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JavaScript Task 1.1</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="bootstrap/bootstrap_css.css" rel="stylesheet">
+  <style>
+
+    body{
+
+      background: linear-gradient(to right, #fdfcfb 10%, #e2d1c3);
+    }
+    img {
+      width: 20px;
+    }
+
+    .main{
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container w-25 mt-5 border main bg-light">
+    <div class="row text-center mt-2" >
+      <div class="text-center">
+        <h2>ADD TEXTBOX</h2>
+        <h2 id="msg"></h2>
+        <button class="btn btn-outline-info w-25 mb-2" id="refresh">REFRESH</button>
+      </div>
+        <div class="d-flex gap-1">
+          <input id="in" class="form-control" type="text" placeholder="Enter your input">
+          <button class="btn btn-outline-success text-dark" id="btnPlus" onclick="addContent()">+</button>
+        </div>
+    </div>
+      
+    <!--area where new element is to be inserted-->
+    <div class="row mt-2 mb-2">
+        <div id="content" class="container"></div>
+    </div>
+  
+  </div>
+
+  <!--Include the external javascript file-->
+  <script src="task1.1.js"></script>
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="bootstrap/bootstrap_js_1.js"></script>
+
+  <script src="bootstrap/bootstrap_js_2.js"></script>
+</body>
+
+</html>

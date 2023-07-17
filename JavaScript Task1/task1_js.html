@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JavaScript Task 1</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="bootstrap/bootstrap_css.css" rel="stylesheet">
+  <style>
+
+    body{
+      background: linear-gradient(to left,lightblue,lightgrey);
+    }
+  
+
+    img {
+      width: 20px;
+    }
+    button{
+      box-shadow: black 3px 3px;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <h2 class="m-5 text-center">YOU CAN ADD TEXTBOX BY CLICKING ON BUTTON</h2>
+  <h2 class="m-5 text-center text-danger" id="msg">
+    </h3>
+    
+
+    <div class="container d-flex mt-3 justify-content-center">
+      <input class="form-control w-25" type="text" placeholder="Enter your input">
+      <button class="btn btn-success ms-3" id="btnPlus" onclick="addContent()"><img src="images/add.svg"></button>
+    </div>
+
+    <!--Div in which the content is added-->
+    <div id="content" class="container mt-3 justify-content-center h-50"></div>
+
+
+    <!--Include the external javascript file-->
+    <script src="task1_script.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="bootstrap/bootstrap_js_1.js">
+      </script>
+
+    <script src="bootstrap/bootstrap_js_2.js">
+      </script>
+</body>
+
+</html>

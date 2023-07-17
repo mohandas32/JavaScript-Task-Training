@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JavaScript Task 2.2
+  </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="bootstrap/bootstrap_css.css" rel="stylesheet">
+
+  <link href="task2.2_style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="wrapper mx-3">
+    <div class="row">
+      <form id="form">
+        <div class="container mb-3 text-center">
+          <!--Area where msg show-->
+          <div class="fs-2 text-success" id="alertMsg" style="visibility: hidden;"></div>
+          <button class="btn my-4" id="addBtn" type="button" onclick="addRowContent()">ADD RECORD</button>
+        </div>
+        <div class="container table-responsive">
+          <table class="table table-sm text-center bg-light" id="table">
+            <thead>
+              <tr class="thead">
+                <th>SR NO.</th>
+                <th>NAME</th>
+                <th>SUBJECT</th>
+                <th>MARKS</th>
+                <th>ACTION</th>
+                <th>REMOVE</th>
+
+              </tr>
+            </thead>
+            <tr>
+              <td class="count  my-1"></td>
+              <td><input class="form-control stu_name  my-1" type="text" value="Mohan" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Name" required></td>
+              <td><input class="form-control subject and atleast 3 characters  my-1" value="Maths" type="text"
+                  pattern="[A-Za-z\s]{3,}" title="Only alphabets allowed" placeholder="Enter Subject" required></td>
+              <td><input class="form-control marks  my-1" type="number" value="80" min="0" max="100"
+                  placeholder="Enter marks" required></td>
+              <td>
+                <div class=" my-1">
+                  <button type="button" class="pass btn btn-outline-success"
+                    onclick="onClickAccept(this)">ACCEPT</button>
+                  <button type="button" class="fail btn btn-outline-danger"
+                    onclick="onClickReject(this)">REJECT</button>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td class="count  my-1"></td>
+              <td><input class="form-control  my-1 stu_name" type="text" value="Mihir" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Name" required></td>
+              <td><input class="form-control  my-1 subject" type="text" value="Science" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Subject" required></td>
+              <td><input class="form-control  my-1 marks" type="number" value="89" min="0" max="100"
+                  placeholder="Enter marks" required></td>
+              <td>
+                <div class=" my-1">
+                  <button type="button" class="pass btn btn-outline-success"
+                    onclick="onClickAccept(this)">ACCEPT</button>
+                  <button type="button" class="fail btn btn-outline-danger"
+                    onclick="onClickReject(this)">REJECT</button>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td class="count  my-1"></td>
+              <td><input class="form-control  my-1 stu_name" type="text" value="Shashank" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Name" required></td>
+              <td><input class="form-control  my-1 subject" type="text" value="Gujarati" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Subject" required></td>
+              <td><input class="form-control  my-1 marks" type="number" value="95" min="0" max="100"
+                  placeholder="Enter marks" required></td>
+              <td>
+                <div class=" my-1">
+                  <button type="button" class="pass btn btn-outline-success"
+                    onclick="onClickAccept(this)">ACCEPT</button>
+                  <button type="button" class="fail btn btn-outline-danger"
+                    onclick="onClickReject(this)">REJECT</button>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td class="count  my-1"></td>
+              <td><input class="form-control  my-1 stu_name" type="text" value="Shashank" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Name" required></td>
+              <td><input class="form-control  my-1 subject" type="text" value="Maths" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Subject" required></td>
+              <td><input class="form-control  my-1 marks" type="number" value="88" min="0" max="100"
+                  placeholder="Enter marks" required></td>
+              <td>
+                <div class=" my-1">
+                  <button type="button" class="pass btn btn-outline-success"
+                    onclick="onClickAccept(this)">ACCEPT</button>
+                  <button type="button" class="fail btn btn-outline-danger"
+                    onclick="onClickReject(this)">REJECT</button>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td class="count  my-1"></td>
+              <td><input class="form-control  my-1 stu_name" type="text" value="Shashank" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Name" required></td>
+              <td><input class="form-control  my-1 subject" type="text" value="Hindi" pattern="[A-Za-z\s]{3,}"
+                  title="Only alphabets allowed and atleast 3 characters" placeholder="Enter Subject" required></td>
+              <td><input class="form-control  my-1 marks" type="number" value="89" min="0" max="100"
+                  placeholder="Enter marks" required></td>
+              <td>
+                <div class=" my-1">
+                  <button type="button" class="pass btn btn-outline-success"
+                    onclick="onClickAccept(this)">ACCEPT</button>
+                  <button type="button" class="fail btn btn-outline-danger"
+                    onclick="onClickReject(this)">REJECT</button>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="container text-center">
+          <button type="submit" id="saveBtn" class="btn ">SAVE RECORD</button>
+        </div>
+      </form>
+    </div>
+    <div class="row" id="reportArea" style="visibility:hidden">
+      <div class="container text-center">
+        <input type="text" class="container form-control mt-5" pattern="[A-Za-z]{3,}" title="Only alphabets allowed"
+          id="searchText" placeholder="Search Name or Subject" onkeyup="searchData()">
+        <div class="container  mt-4">
+          <button class="btn" id="sortName" onclick="sortContent(1)">SORT BY NAME</button>
+          <button class="btn" id="sortSubject" onclick="sortContent(2)">SORT BY SUBJECT</button>
+          <button class="btn" id="sortMarks" onclick="sortMarks()">SORT BY MARKS</button>
+        </div>
+        <div class="container table-responsive" id="tableArea">
+          <table id="reportTable" class="table text-center mt-3 bg-light"> </table>
+        </div>
+
+        <h3 class="fs-1 my-3">RESULT TABLE</h3>
+
+        <!--Percentage table-->
+        <div class="container table-responsive" id="tablePercentage">
+          <table id="percentageTable" class="table text-center mt-3 bg-light"> </table>
+        </div>
+      </div>
+    </div>
+
+    <!--Including the external javascript file-->
+    <script src="task2.2_js.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="bootstrap/bootstrap_js_1.js"></script>
+
+    <script src="bootstrap/bootstrap_js_2.js"></script>
+</body>
+
+</html>
